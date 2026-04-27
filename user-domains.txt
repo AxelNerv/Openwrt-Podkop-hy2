@@ -1,0 +1,571 @@
+// ============================================================
+// USER DOMAINS для Podkop (text mode)
+// ИСКЛЮЧЕНО из списка (уже в community): youtube, meta,
+// discord, telegram, twitter, cloudflare
+// TikTok оставлен полный — community-list не покрывает все CDN
+// ============================================================
+
+// ===== Spotify (РАСШИРЕННЫЙ для Discord Rich Presence) =====
+// Основные API endpoints
+spotify.com
+www.spotify.com
+open.spotify.com
+accounts.spotify.com
+api.spotify.com
+login5.spotify.com
+appresolve.spotify.com
+aet.spotify.com
+image-upload.spotify.com
+remote-auth-gateway.spotify.com
+
+// Региональные spclient'ы (Spotify балансирует между ними)
+spclient.wg.spotify.com
+gew1-spclient.spotify.com
+gew4-spclient.spotify.com
+guc3-spclient.spotify.com
+gae2-spclient.spotify.com
+gae4-spclient.spotify.com
+
+// WebSocket-каналы (КРИТИЧНО для Discord Rich Presence)
+dealer.spotify.com
+dealer-gew1.spotify.com
+dealer-gew4.spotify.com
+dealer-guc3.spotify.com
+dealer-gae2.spotify.com
+
+// Spotify CDN / аудио-стриминг
+spotifycdn.com
+scdn.co
+pscdn.co
+seektables.scdn.co
+audio4-ak-spotify-com.akamaized.net
+audio-sp-ams.pscdn.co
+audio-sp-fra.pscdn.co
+heads4-ak-spotify-com.akamaized.net
+heads-sp-ams.pscdn.co
+heads-sp-fra.pscdn.co
+
+// Другое Spotify
+spotifyforbrands.com
+
+// ===== TikTok (расширенный, community не покрывает всё) =====
+tiktok.com
+www.tiktok.com
+m.tiktok.com
+vm.tiktok.com
+tiktokcdn.com
+tiktokcdn-us.com
+tiktokcdn-eu.com
+v16a.tiktokcdn.com
+v16m.tiktokcdn.com
+v19.tiktokcdn.com
+tiktokv.com
+tiktokv.us
+tiktokw.us
+api.tiktokv.com
+api-h2.tiktokv.com
+log.tiktokv.com
+ib.tiktokv.com
+musical.ly
+api2.musical.ly
+api2-16-h2.musical.ly
+api2-21-h2.musical.ly
+log2.musical.ly
+mon.musical.ly
+musically.com
+ibyteimg.com
+byteoversea.com
+byteoversea.net
+ibytedtos.com
+bytefcdn-oversea.com
+i18n-pglstatp.com
+zijieapi.com
+ttlivecdn.com
+p16-tiktokcdn-com.akamaized.net
+
+// ===== Xiaomi Mi Home / IoT (не работает через Podkop без добавления) =====
+mi.com
+home.mi.com
+iot.mi.com
+api.io.mi.com
+i.mi.com
+g.mi.com
+idm.iot.mi.com
+api.mina.mi.com
+awus2.mi.com
+awwb-static.mi.com
+awwb.mi.com
+a.stat.xiaomi.com
+abtest.mistat.xiaomi.com
+api.ad.xiaomi.com
+cdn.ad.xiaomi.com
+data.mistat.xiaomi.com
+e.ad.xiaomi.com
+mlog.s.xiaomi.com
+
+// ===== Google DNS / DoH / DoT =====
+dns.google
+dns.google.com
+
+// ===== Google Ads / Analytics / Tag Manager =====
+www.googlesyndication.com
+pagead2.googlesyndication.com
+tpc.googlesyndication.com
+www.doubleclick.net
+ad.doubleclick.net
+stats.g.doubleclick.net
+www.googleadservices.com
+partner.googleadservices.com
+www.googletagmanager.com
+www.googletagservices.com
+www.google-analytics.com
+analytics.google.com
+ssl.google-analytics.com
+
+// ===== Google статика / шрифты / изображения =====
+gstatic.com
+www.gstatic.com
+fonts.gstatic.com
+encrypted-tbn0.gstatic.com
+lh3.googleusercontent.com
+lh4.googleusercontent.com
+lh5.googleusercontent.com
+lh6.googleusercontent.com
+googleusercontent.com
+googlezip.net
+
+// ===== Google домены разных регионов =====
+google.ru
+google.de
+google.fr
+google.co.uk
+google.com.br
+google.com
+gcr.io
+
+// ===== Firebase / Google Cloud APIs =====
+firebase.google.com
+firebaseio.com
+firebasestorage.googleapis.com
+storage.googleapis.com
+www.googleapis.com
+oauth2.googleapis.com
+maps.googleapis.com
+fonts.googleapis.com
+googleapis.com
+
+// ===== Figma (для работы) =====
+figma.com
+figma.site
+makeproxy-c.figma.site
+makeproxy-m.figma.site
+
+// ===== CDN для фронтенда (Claude, AI, статика) =====
+awswaf.com
+esm.sh
+jsdelivr.net
+unpkg.com
+
+// ===== Claude / Anthropic (полный набор) =====
+claude.ai
+anthropic.com
+api.anthropic.com
+platform.claude.com
+code.claude.com
+docs.claude.com
+statsig.anthropic.com
+
+// ===== Другие AI-сервисы =====
+openai.com
+oaistatic.com
+oaiusercontent.com
+chat.openai.com
+chatgpt.com
+bard.google.com
+gemini.google.com
+makersuite.google.com
+aistudio.google.com
+poe.com
+character.ai
+perplexity.ai
+perplexity.com
+you.com
+huggingface.co
+midjourney.com
+runway.com
+runwayml.com
+replicate.com
+cohere.ai
+mistral.ai
+deepseek.com
+kling.ai
+suno.ai
+suno.com
+elevenlabs.io
+stability.ai
+
+// ===== LinkedIn (заблокирован в РФ с 2016) =====
+linkedin.com
+licdn.com
+linkedinstatic.com
+
+// ===== Reddit =====
+reddit.com
+redd.it
+redditmedia.com
+redditstatic.com
+
+// ===== Medium / Substack =====
+medium.com
+medium.build
+substack.com
+substackcdn.com
+
+// ===== Донаты / платежки =====
+patreon.com
+patreonusercontent.com
+buymeacoffee.com
+ko-fi.com
+paypal.com
+paypalobjects.com
+stripe.com
+stripecdn.com
+wise.com
+transferwise.com
+revolut.com
+
+// ===== Dev / SaaS (ушедшие из РФ) =====
+atlassian.com
+atlassian.net
+bitbucket.org
+trello.com
+jira.com
+confluence.com
+slack.com
+slack-edge.com
+slackb.com
+notion.so
+notion.site
+zoom.us
+zoomgov.com
+miro.com
+asana.com
+intercom.io
+intercom.com
+intercomcdn.com
+monday.com
+clickup.com
+airtable.com
+linear.app
+vercel.com
+vercel.app
+netlify.com
+netlify.app
+heroku.com
+herokuapp.com
+herokucdn.com
+railway.app
+render.com
+fly.io
+supabase.com
+supabase.co
+
+// ===== GitHub (периодически блокируется) =====
+github.com
+githubusercontent.com
+githubassets.com
+github.io
+ghcr.io
+githubapp.com
+githubcopilot.com
+copilot.github.com
+gist.github.com
+
+// ===== Стриминг видео =====
+netflix.com
+nflxvideo.net
+nflximg.net
+nflxext.com
+nflxso.net
+hulu.com
+hbomax.com
+max.com
+hbo.com
+disneyplus.com
+disney-plus.net
+bamgrid.com
+primevideo.com
+paramountplus.com
+peacocktv.com
+crunchyroll.com
+funimation.com
+tv.apple.com
+applemusic.com
+music.apple.com
+
+// ===== Стриминг музыки (кроме Spotify выше) =====
+soundcloud.com
+sndcdn.com
+deezer.com
+dzcdn.net
+tidal.com
+bandcamp.com
+bcbits.com
+
+// ===== Twitch =====
+twitch.tv
+twitchcdn.net
+ttvnw.net
+jtvnw.net
+
+// ===== Игровые платформы / магазины =====
+epicgames.com
+epicgames.dev
+unrealengine.com
+gog.com
+
+// ===== EA / Origin / Apex Legends =====
+ea.com
+ea-online.com
+origin.com
+easo.ea.com
+signin.ea.com
+accounts.ea.com
+help.ea.com
+answers.ea.com
+gateway.ea.com
+api.ea.com
+data.ea.com
+river.data.ea.com
+eadp.com
+eaassets-a.akamaihd.net
+apexlegends.com
+playapex.com
+respawn.com
+respawnentertainment.com
+
+// ===== Ubisoft =====
+ubisoft.com
+ubi.com
+ubisoftconnect.com
+ubisoftstatic.com
+uplay.com
+
+// ===== Blizzard / Battle.net =====
+blizzard.com
+battle.net
+battlenet.com.cn
+blizzardcdn.com
+activision.com
+callofduty.com
+
+// ===== Rockstar Games =====
+rockstargames.com
+socialclub.rockstargames.com
+rsg.sc
+
+// ===== Riot Games (LoL, Valorant) =====
+riotgames.com
+riotcdn.net
+leagueoflegends.com
+valorant.com
+playvalorant.com
+
+// ===== Roblox =====
+roblox.com
+rbxcdn.com
+
+// ===== Прочие игры =====
+nexon.com
+wargaming.net
+worldoftanks.com
+mojang.com
+minecraft.net
+
+// ===== Новости (заблокированные / иноагенты / ушедшие) =====
+bbc.com
+bbc.co.uk
+bbci.co.uk
+bbcrussian.com
+dw.com
+voanews.com
+voa.gov
+currenttime.tv
+svoboda.org
+rferl.org
+echo.msk.ru
+meduza.io
+novayagazeta.eu
+novaya.media
+theins.ru
+republic.ru
+istories.media
+thebell.io
+mediazona.ca
+agents.media
+dossier.center
+euronews.com
+reuters.com
+apnews.com
+bloomberg.com
+ft.com
+wsj.com
+nytimes.com
+nyt.com
+washingtonpost.com
+economist.com
+theguardian.com
+independent.co.uk
+politico.com
+politico.eu
+cnn.com
+nbcnews.com
+abcnews.go.com
+cbsnews.com
+
+// ===== Proton / анонимность =====
+torproject.org
+protonvpn.com
+proton.me
+protonmail.com
+protonvpn.ch
+protonmail.ch
+tutanota.com
+tutanota.de
+fastmail.com
+mullvad.net
+signal.org
+signalusers.org
+threema.ch
+
+// ===== Adobe (ограничили РФ) =====
+adobe.com
+adobe.io
+adobelogin.com
+adobestatic.com
+creativecloud.adobe.com
+typekit.net
+adobesign.com
+behance.net
+
+// ===== Microsoft (частичные ограничения) =====
+visualstudio.com
+vsassets.io
+vscode-cdn.net
+azure.com
+azureedge.net
+office365.com
+sharepoint.com
+xbox.com
+xboxlive.com
+
+// ===== JetBrains (ограничили лицензии) =====
+jetbrains.com
+intellij.net
+
+// ===== Dropbox / Box =====
+dropbox.com
+dropboxusercontent.com
+dropboxstatic.com
+box.com
+boxcdn.net
+
+// ===== Криптовалюта / биржи =====
+binance.com
+bybit.com
+kucoin.com
+kraken.com
+coinbase.com
+gemini.com
+okx.com
+mexc.com
+bitfinex.com
+gate.io
+htx.com
+metamask.io
+trustwallet.com
+uniswap.org
+coingecko.com
+coinmarketcap.com
+etherscan.io
+bscscan.com
+
+// ===== Pinterest / Tumblr =====
+pinterest.com
+pinimg.com
+tumblr.com
+tumblr.co
+
+// ===== Quora / Stack =====
+quora.com
+quoracdn.net
+stackexchange.com
+stackoverflow.com
+sstatic.net
+superuser.com
+serverfault.com
+askubuntu.com
+mathoverflow.net
+
+// ===== Обучение (ушли из РФ) =====
+coursera.org
+coursera-for-business.org
+udemy.com
+udemycdn.com
+pluralsight.com
+edx.org
+khanacademy.org
+kastatic.org
+kasandbox.org
+duolingo.com
+skillshare.com
+masterclass.com
+udacity.com
+codecademy.com
+
+// ===== Freelance / работа =====
+upwork.com
+fiverr.com
+freelancer.com
+hh.ru
+
+// ===== Travel (ушедшие) =====
+airbnb.com
+airbnb.ru
+booking.com
+bstatic.com
+tripadvisor.com
+
+// ===== Shopping =====
+ebay.com
+ebaystatic.com
+ebayimg.com
+etsy.com
+etsystatic.com
+envato.com
+envatousercontent.com
+themeforest.net
+
+// ===== Canva / Grammarly =====
+canva.com
+canva.site
+grammarly.com
+grammarly.io
+
+// ===== Shopify =====
+shopify.com
+shopifycdn.com
+shopifyapps.com
+
+// ===== Банки / платежи =====
+swift.com
+visa.com
+mastercard.com
+mastercard.us
+
+// ===== Спорт =====
+nhl.com
+nba.com
+nfl.com
+uefa.com
+fifa.com
