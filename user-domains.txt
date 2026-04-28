@@ -275,16 +275,6 @@ rockstargames.com
 socialclub.rockstargames.com
 rsg.sc
 
-// ===== Riot Games (LoL, Valorant, TFT, Wild Rift) =====
-riotgames.com
-riotcdn.net
-leagueoflegends.com
-valorant.com
-playvalorant.com
-teamfighttactics.com
-wildrift.leagueoflegends.com
-legendsofruneterra.com
-
 // ===== 2K Games (заблокированы на PSN в РФ с марта 2026) =====
 2k.com
 take2games.com
