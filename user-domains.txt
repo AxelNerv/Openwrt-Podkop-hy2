@@ -2,7 +2,9 @@
 // USER DOMAINS для Podkop (text mode)
 // Обновлено: 28 апреля 2026
 // ИСКЛЮЧЕНО из списка (уже в community): youtube, meta,
-// discord, telegram, twitter, cloudflare
+// telegram, twitter, cloudflare
+// Discord — НЕ полагаемся на community (даёт пинг 5000+),
+// держим полный список ниже
 // TikTok оставлен полный — community-list не покрывает все CDN
 // ============================================================
 
@@ -343,11 +345,50 @@ supercell.com
 clashofclans.com
 brawlstars.com
 
-// ===== Discord-связанное (для интеграций, сам discord в community) =====
+// ============================================================
+// Discord (заблокирован в РФ с октября 2024, активный DPI/throttling)
+// ============================================================
+
+// --- Основные домены ---
+discord.com
+www.discord.com
 discordapp.com
-discordapp.net
+www.discordapp.com
 discord.gg
+discord.gift
+discord.new
+discord.dev
+discord.tools
+dis.gd
+
+// --- API / Gateway / Auth ---
+canary.discord.com
+ptb.discord.com
+gateway.discord.gg
+remote-auth-gateway.discord.gg
+router.discordapp.net
+
+// --- Статус / поддержка ---
+status.discord.com
+discordstatus.com
+support.discord.com
+support-dev.discord.com
+
+// --- CDN / медиа / вложения ---
+discordapp.net
+cdn.discordapp.com
+media.discordapp.net
+images-ext-1.discordapp.net
+images-ext-2.discordapp.net
+
+// --- Голос / видео (региональные сервера) ---
+// Шаблон: <city><N>.discord.media (например rotterdam5876.discord.media)
+// Корневой домен покрывает все регионы через wildcard-DNS
 discord.media
+
+// --- Вложения через Google Cloud Storage ---
+// (без подсетей — иначе пойдёт весь GCP)
+discord-attachments-uploads-prd.storage.googleapis.com
 
 // ============================================================
 // НОВОСТИ (заблокированные / иноагенты / ушедшие)
