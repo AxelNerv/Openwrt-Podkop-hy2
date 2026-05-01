@@ -17,7 +17,6 @@
 
 Эти списки должны быть **включены** в секции (Sections → main → Community lists). Домены/подсети этих сервисов **не дублированы** в моих файлах:
 
-- ✅ `discord`
 - ✅ `meta` (Facebook/Instagram/WhatsApp)
 - ✅ `telegram`
 - ✅ `twitter` (X)
