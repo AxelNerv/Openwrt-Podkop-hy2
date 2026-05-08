@@ -1,16 +1,5 @@
-// ============================================================
-// USER DOMAINS для Podkop (text mode)
-// Обновлено: 28 апреля 2026
-// ИСКЛЮЧЕНО из списка (уже в community): youtube, meta,
-// telegram, twitter, cloudflare
-// Discord — НЕ полагаемся на community (даёт пинг 5000+),
-// держим полный список ниже
-// TikTok оставлен полный — community-list не покрывает все CDN
-// ============================================================
-
-// ===== Spotify (РАСШИРЕННЫЙ для Discord Rich Presence) =====
+fast.com
 spotify.com
-www.spotify.com
 open.spotify.com
 accounts.spotify.com
 api.spotify.com
@@ -32,29 +21,87 @@ spotifycdn.com
 scdn.co
 pscdn.co
 spotifycdn.net
-
-// ===== TikTok (полный — community не покрывает все CDN) =====
 tiktok.com
+m.tiktok.com
+vt.tiktok.com
+vm.tiktok.com
+tiktok.net
+v.tiktok.net
 tiktokv.com
+tiktokv.us
+tiktokv.eu
+tiktokw.us
 tiktokcdn.com
 tiktokcdn-us.com
 tiktokcdn-eu.com
-musical.ly
-muscdn.com
-bytedance.com
-bytecdn.cn
-ibyteimg.com
-byteoversea.com
-ttwstatic.com
+tiktokcdn-live.com
+api.tiktok.com
+api.tiktokv.com
+api16-normal-c-useast1a.tiktokv.com
+api16-core-c-useast1a.tiktokv.com
+api19-core-c-useast1a.tiktokv.com
+api22-core-c-useast1a.tiktokv.com
+business-api.tiktok.com
+log.tiktokv.com
+mon.tiktokv.com
+mssdkapi.tiktokv.com
+mssdk.bytedance.com
 isnssdk.com
-amemv.com
-ttvnw.net
-sgsnssdk.com
 v16-webapp.tiktok.com
 v19-webapp.tiktok.com
-mssdkapi.tiktokv.com
-
-// ===== Xiaomi Mi Home / IoT =====
+v22-webapp.tiktok.com
+v16.tiktokcdn.com
+v19.tiktokcdn.com
+v22.tiktokcdn.com
+pull-f3.tiktokcdn.com
+push-f3.tiktokcdn.com
+stream.tiktokcdn.com
+upload.tiktok.com
+webcast.tiktok.com
+webcast.tiktokv.com
+p16-tiktokcdn-com.akamaized.net
+p19-tiktokcdn-com.akamaized.net
+p22-tiktokcdn-com.akamaized.net
+ssl.cdn.tiktok.com.c.footprint.net
+tiktok.com.c.footprint.net
+tiktokcdn.com.wsdvs.com
+tiktokcdn.liveplay.myqcloud.com
+aggr16-normal.tiktokv.com
+aggr32-normal.tiktokv.eu
+api-h2.tiktokv.com
+api16-core-ycru.tiktokv.com
+api16-normal-ycru.tiktokv.com
+cp-rp16-normal-ycru.tiktokv.com
+gecko16-platform-ycru.tiktokv.com
+lf16-effectcdn-sg.tiktokcdn.com
+log16-platform-ycru.tiktokv.com
+oec16-normal-ycru.tiktokv.com
+oec-im-tt-sg.tiktokglobalshopv.com
+p16-common-sign.tiktokcdn.com
+p16-sign-sg.tiktokcdn.com
+p19-common-sign.tiktokcdn.com
+p77-sg.tiktokcdn.com
+search16-normal-ycru.tiktokv.com
+sf-ssp.tiktokcdn.com
+tnc16-normal-ycru.tiktokv.com
+v16m.tiktokcdn.com
+webcast-frontier16-normal-alisg.tiktokv.com
+webcast-frontier22-normal-alisg.tiktokv.com
+webcast16-normal-ycru.tiktokv.com
+tiktokglobalshopv.com
+bytedance.com
+bytecdn.cn
+byteimg.com
+ibyteimg.com
+ibytedtos.com
+byteoversea.com
+byted.org
+byted-static.com
+ttwstatic.com
+musical.ly
+muscdn.com
+amemv.com
+sgsnssdk.com
 mi.com
 xiaomi.com
 mijia.com
@@ -76,23 +123,16 @@ miotc.com
 mibrain.xiaomi.com
 fr.api.io.mi.com
 us.api.io.mi.com
-
-// ===== Figma =====
 figma.com
 figma-alpha-api.s3.us-west-2.amazonaws.com
 figma.io
 figma-staging.com
 figma-static.com
-
-// ===== AI / LLM сервисы =====
-// Claude / Anthropic
 claude.ai
 anthropic.com
 console.anthropic.com
 api.anthropic.com
 docs.anthropic.com
-
-// OpenAI / ChatGPT (российские IP блокируются на стороне OpenAI)
 openai.com
 chatgpt.com
 chat.openai.com
@@ -103,15 +143,11 @@ platform.openai.com
 api.openai.com
 sora.com
 sora.chatgpt.com
-
-// Google AI
 gemini.google.com
 ai.google.dev
 makersuite.google.com
 aistudio.google.com
 generativelanguage.googleapis.com
-
-// Прочие AI-сервисы
 perplexity.ai
 pplx.ai
 midjourney.com
@@ -136,8 +172,6 @@ luma.ai
 lumalabs.ai
 qwen.ai
 notebooklm.google.com
-
-// ===== GitHub / Git =====
 github.com
 github.io
 githubusercontent.com
@@ -149,8 +183,6 @@ copilot.github.com
 gist.github.com
 codespaces.github.com
 api.github.com
-
-// ===== Стриминг видео =====
 netflix.com
 nflxvideo.net
 nflximg.net
@@ -169,8 +201,6 @@ peacocktv.com
 crunchyroll.com
 funimation.com
 tv.apple.com
-
-// ===== Стриминг музыки =====
 soundcloud.com
 sndcdn.com
 deezer.com
@@ -180,35 +210,14 @@ bandcamp.com
 bcbits.com
 applemusic.com
 music.apple.com
-
-// ===== Twitch =====
 twitch.tv
 twitchcdn.net
 ttvnw.net
 jtvnw.net
-
-// ============================================================
-// ИГРОВЫЕ ПЛАТФОРМЫ (расширенный блок, апрель 2026)
-// ============================================================
-
-// ===== Steam (платформа работает, но steamcommunity.com частично =====
-// в реестре РКН + платежи через РФ-карты не работают)
-steamcommunity.com
-steampowered.com
-steamstatic.com
-steamcontent.com
-steamserver.net
-steamusercontent.com
-steamcdn-a.akamaihd.net
-steamuserimages-a.akamaihd.net
-steam-chat.com
-fastly-steam.akamaized.net
 valvesoftware.com
 csgo.com
 dota2.com
 counter-strike.net
-
-// ===== Epic Games (приостановили коммерцию с РФ в 2022) =====
 epicgames.com
 epicgames.dev
 unrealengine.com
@@ -218,13 +227,9 @@ ol.epicgames.com
 launcher-public-service-prod06.ol.epicgames.com
 account-public-service-prod03.ol.epicgames.com
 catalog-public-service-prod06.ol.epicgames.com
-
-// ===== GOG =====
 gog.com
 gog-statics.com
 gogalaxy.com
-
-// ===== EA / Origin / Apex Legends / Battlefield =====
 ea.com
 ea-online.com
 origin.com
@@ -247,16 +252,12 @@ battlefield.com
 needforspeed.com
 sims.com
 ufc.ea.com
-
-// ===== Ubisoft =====
 ubisoft.com
 ubi.com
 ubisoftconnect.com
 ubisoftstatic.com
 uplay.com
 ubisoftgameservices.com
-
-// ===== Blizzard / Battle.net / Activision =====
 blizzard.com
 battle.net
 battlenet.com.cn
@@ -271,13 +272,9 @@ warcraft.com
 diablo.com
 hearthstone.com
 starcraft.com
-
-// ===== Rockstar Games =====
 rockstargames.com
 socialclub.rockstargames.com
 rsg.sc
-
-// ===== 2K Games (заблокированы на PSN в РФ с марта 2026) =====
 2k.com
 take2games.com
 mafiagame.com
@@ -285,58 +282,38 @@ borderlands.com
 bioshockinfinite.com
 civilization.com
 nba2k.com
-
-// ===== Bethesda / Zenimax (ушли из РФ) =====
 bethesda.net
 zenimax.com
 elderscrollsonline.com
 fallout.bethesda.net
 doom.com
-
-// ===== CD Projekt RED (ушли из РФ) =====
 cdprojektred.com
 thewitcher.com
 cyberpunk.net
-
-// ===== Bungie / Destiny =====
 bungie.net
 destinythegame.com
-
-// ===== Mihoyo / Hoyoverse (Genshin Impact, HSR, ZZZ) =====
 hoyoverse.com
 mihoyo.com
 hoyolab.com
 genshin.hoyoverse.com
 honkaistarrail.com
 zenlesszonezero.com
-
-// ===== Square Enix / Final Fantasy =====
 square-enix.com
 finalfantasyxiv.com
 square-enix-games.com
-
-// ===== Mojang / Minecraft =====
 mojang.com
 minecraft.net
-
-// ===== VRChat / Nexon / прочие (попавшие под ограничения 2026) =====
 vrchat.com
 vrchat.cloud
 nexon.com
 warhammer.com
 gladius.warhammer.com
-
-// ===== Wargaming (мир танков ещё работает в РФ через lesta) =====
 wargaming.net
 worldoftanks.com
 worldofwarships.com
-
-// ===== Niantic (Pokemon GO) =====
 nianticlabs.com
 nianticsdk.com
 pokemongo.com
-
-// ===== Mobile / casual =====
 moonton.com
 mobilelegends.com
 king.com
@@ -344,55 +321,30 @@ candycrushsaga.com
 supercell.com
 clashofclans.com
 brawlstars.com
-
-// ============================================================
-// Discord (заблокирован в РФ с октября 2024, активный DPI/throttling)
-// ============================================================
-
-// --- Основные домены ---
 discord.com
-www.discord.com
 discordapp.com
-www.discordapp.com
 discord.gg
 discord.gift
 discord.new
 discord.dev
 discord.tools
 dis.gd
-
-// --- API / Gateway / Auth ---
 canary.discord.com
 ptb.discord.com
 gateway.discord.gg
 remote-auth-gateway.discord.gg
 router.discordapp.net
-
-// --- Статус / поддержка ---
 status.discord.com
 discordstatus.com
 support.discord.com
 support-dev.discord.com
-
-// --- CDN / медиа / вложения ---
 discordapp.net
 cdn.discordapp.com
 media.discordapp.net
 images-ext-1.discordapp.net
 images-ext-2.discordapp.net
-
-// --- Голос / видео (региональные сервера) ---
-// Шаблон: <city><N>.discord.media (например rotterdam5876.discord.media)
-// Корневой домен покрывает все регионы через wildcard-DNS
 discord.media
-
-// --- Вложения через Google Cloud Storage ---
-// (без подсетей — иначе пойдёт весь GCP)
 discord-attachments-uploads-prd.storage.googleapis.com
-
-// ============================================================
-// НОВОСТИ (заблокированные / иноагенты / ушедшие)
-// ============================================================
 bbc.com
 bbc.co.uk
 bbci.co.uk
@@ -434,8 +386,6 @@ cnn.com
 nbcnews.com
 abcnews.go.com
 cbsnews.com
-
-// ===== Proton / анонимность =====
 torproject.org
 torproject.com
 protonvpn.com
@@ -452,8 +402,6 @@ windscribe.com
 signal.org
 signalusers.org
 threema.ch
-
-// ===== Adobe (ограничили РФ) =====
 adobe.com
 adobe.io
 adobelogin.com
@@ -464,19 +412,11 @@ adobesign.com
 behance.net
 photoshop.com
 lightroom.adobe.com
-
-// ============================================================
-// Microsoft / Windows / UUP dump
-// ============================================================
-
-// --- UUP dump (сам сайт-агрегатор) ---
 uupdump.net
 uupdump.ml
 uupdump.cn
 api.uupdump.net
 gen.uupdump.net
-
-// --- Windows Update / Delivery (откуда UUP качает файлы) ---
 dl.delivery.mp.microsoft.com
 tlu.dl.delivery.mp.microsoft.com
 emdl.ws.microsoft.com
@@ -495,8 +435,6 @@ go.microsoft.com
 download.microsoft.com
 ntservicepack.microsoft.com
 wustat.windows.com
-
-// --- Microsoft Account / лицензирование ---
 microsoft.com
 microsoftonline.com
 live.com
@@ -509,32 +447,22 @@ sharepoint.com
 onedrive.com
 msn.com
 bing.com
-
-// --- Microsoft Dev / IDE ---
 visualstudio.com
 vsassets.io
 vscode-cdn.net
 code.visualstudio.com
 marketplace.visualstudio.com
-
-// --- Azure / CDN ---
 azure.com
 azureedge.net
 azurewebsites.net
 trafficmanager.net
-
-// --- Xbox ---
 xbox.com
 xboxlive.com
 xboxgameshub.com
-
-// --- Microsoft Store / Apps ---
 appcenter.ms
 microsoftapp.net
 s-microsoft.com
 img-prod-cms-rt-microsoft-com.akamaized.net
-
-// ===== Apple (платежи заблокированы в РФ с 1 апреля 2026) =====
 apple.com
 icloud.com
 icloud-content.com
@@ -544,20 +472,14 @@ itunes.apple.com
 apps.apple.com
 appstoreconnect.apple.com
 testflight.apple.com
-
-// ===== JetBrains (ограничили лицензии) =====
 jetbrains.com
 intellij.net
 jetbrains.space
-
-// ===== Dropbox / Box =====
 dropbox.com
 dropboxusercontent.com
 dropboxstatic.com
 box.com
 boxcdn.net
-
-// ===== Криптовалюта / биржи =====
 binance.com
 bybit.com
 kucoin.com
@@ -576,8 +498,6 @@ coingecko.com
 coinmarketcap.com
 etherscan.io
 bscscan.com
-
-// ===== LinkedIn / Reddit / Medium =====
 linkedin.com
 licdn.com
 reddit.com
@@ -587,14 +507,10 @@ redditmedia.com
 medium.com
 substack.com
 substackcdn.com
-
-// ===== Pinterest / Tumblr =====
 pinterest.com
 pinimg.com
 tumblr.com
 tumblr.co
-
-// ===== Quora / Stack =====
 quora.com
 quoracdn.net
 stackexchange.com
@@ -604,8 +520,6 @@ superuser.com
 serverfault.com
 askubuntu.com
 mathoverflow.net
-
-// ===== Обучение (ушли из РФ) =====
 coursera.org
 coursera-for-business.org
 udemy.com
@@ -620,20 +534,14 @@ skillshare.com
 masterclass.com
 udacity.com
 codecademy.com
-
-// ===== Freelance / работа =====
 upwork.com
 fiverr.com
 freelancer.com
-
-// ===== Travel (ушедшие) =====
 airbnb.com
 airbnb.ru
 booking.com
 bstatic.com
 tripadvisor.com
-
-// ===== Shopping =====
 ebay.com
 ebaystatic.com
 ebayimg.com
@@ -642,20 +550,14 @@ etsystatic.com
 envato.com
 envatousercontent.com
 themeforest.net
-
-// ===== Canva / Grammarly =====
 canva.com
 canva.site
 grammarly.com
 grammarly.io
-
-// ===== Shopify / Stripe =====
 shopify.com
 shopifycdn.com
 shopifyapps.com
 stripe.com
-
-// ===== Платежи / банки =====
 swift.com
 visa.com
 mastercard.com
@@ -664,8 +566,6 @@ paypal.com
 revolut.com
 wise.com
 transferwise.com
-
-// ===== SaaS / Dev tools =====
 notion.so
 vercel.com
 vercel.app
@@ -687,14 +587,10 @@ linear.app
 airtable.com
 intercom.io
 intercom.com
-
-// ===== Спорт =====
 nhl.com
 nba.com
 nfl.com
 uefa.com
 fifa.com
-
-// ===== Прочее =====
 apkmirror.com
 apkpure.com
