@@ -1,245 +1,191 @@
 # Podkop Lists — домены и подсети для OpenWrt + Hysteria 2
 
-Готовые списки доменов и подсетей для [**Podkop**](https://github.com/itdoginfo/podkop) на OpenWrt-роутерах. Покрывают заблокированные в РФ сервисы, ушедшие с рынка РФ сервисы, а также домены которые не работают «по умолчанию» через community-lists (Xiaomi Mi Home, Spotify для Discord Rich Presence, EA/Apex Legends, Figma и другие).
+Готовые списки доменов и подсетей для [**Podkop**](https://github.com/itdoginfo/podkop) на OpenWrt-роутерах. Покрывают заблокированные в РФ сервисы, ушедшие с рынка РФ сервисы, а также домены которые не работают через community-lists по умолчанию.
 
-Протестировано на **ASUS TUF-AX4200** и **Cudy TR3000** (с 256 MB flash), OpenWrt 24.10+, Podkop v0.7.14+, Sing-box 1.12.22+.
+Протестировано на **ASUS TUF-AX4200** и **Cudy TR3000** (256 MB flash), OpenWrt 24.10+, Podkop v0.7.14+, Sing-box 1.12.22+.
 
-## 📋 Что внутри
+---
 
-| Файл | Что содержит | Строк |
-|------|--------------|-------|
-| [`user-domains.txt`](./user-domains.txt) | Домены заблокированных/ушедших сервисов + критичные API-endpoints | ~550 |
-| [`user-subnets.txt`](./user-subnets.txt) | IP-подсети тех же сервисов (Google Cloud, EA, Blizzard, Netflix и др.) | ~250 |
+## 📋 Файлы
 
-Оба файла — в формате **text mode** для полей `User domains text` и `User subnets text` в Podkop. Поддерживают `//`-комментарии и секции.
+| Файл | Строк |
+|------|-------|
+| [`user-domains.txt`](./user-domains.txt) | ~600 |
+| [`user-subnets.txt`](./user-subnets.txt) | ~120 |
 
-## 🎯 Community-lists (галочки в Podkop)
-
-Эти списки должны быть **включены** в секции (Sections → main → Community lists). Домены/подсети этих сервисов **не дублированы** в моих файлах:
-
-- ✅ `meta` (Facebook/Instagram/WhatsApp)
-- ✅ `telegram`
-- ✅ `twitter` (X)
-- ✅ `youtube`
-- ✅ `cloudflare`
-- ✅ `tiktok` (но расширен в `user-domains.txt`, т.к. community не покрывает все CDN)
-
-Если ты **отключил** какой-то из этих community-lists — соответствующие домены/подсети нужно добавить вручную (я их не включил в файлы чтобы не было конфликтов).
+---
 
 ## 🚀 Быстрый старт
 
 ### Требования
 
-- OpenWrt 24.10 или новее
-- Podkop v0.7.14 или новее ([установка](https://github.com/itdoginfo/podkop#установка))
-- Hysteria 2 / VLESS / другой прокси-сервер уже настроен
-- Минимум 30 MB свободного flash-памяти на роутере
+- OpenWrt 24.10+
+- Podkop v0.7.14+ ([установка](https://github.com/itdoginfo/podkop#установка))
+- Hysteria 2 / VLESS или другой прокси уже настроен
 
 ### Шаг 1. Открой Podkop
 
-В браузере: `http://192.168.1.1` → **Services → Podkop → Sections → main**
+`http://192.168.1.1` → **Services → Podkop → Sections → main**
 
 ### Шаг 2. Включи Community-lists
 
-Отметь галочки для списков из секции выше (discord, meta, telegram, twitter, youtube, cloudflare, tiktok).
+Обязательно включи галочки:
 
-### Шаг 3. Вставь домены
+- `cloudflare`
+- `discord` *(включи, даже если добавляешь Discord через внешний список)*
+- `meta`
+- `russia_inside`
+- `telegram`
+- `twitter`
 
-1. Открой файл [`user-domains.txt`](./user-domains.txt) в raw-виде (кнопка **Raw** на GitHub)
-2. Выдели весь текст (`Ctrl+A`) → скопируй (`Ctrl+C`)
-3. В Podkop установи `Custom Domain List Type` → **Text**
-4. В поле **User Domains (text)** вставь скопированный текст
-5. Сохрани
+### Шаг 3. Подключи списки через внешние URL
 
-### Шаг 4. Вставь подсети
+Это самый надёжный способ — роутер скачивает файлы сам напрямую с GitHub.
 
-1. Открой файл [`user-subnets.txt`](./user-subnets.txt) в raw-виде
-2. Выдели весь текст → скопируй
-3. Установи `Custom Subnet List Type` → **Text**
-4. В поле **User Subnets (text)** вставь скопированный текст
+В Podkop → **Sections → main**:
 
-### Шаг 5. Рекомендуемые настройки Podkop
+1. `Custom Domain List Type` → **Disabled** (текстовое поле не нужно)
+2. `Custom Subnet List Type` → **Disabled**
+3. В поле **External domain lists** добавь:
+   ```
+   https://raw.githubusercontent.com/AxelNerv/Openwrt-Podkop-hy2/main/user-domains.txt
+   ```
+4. В поле **External subnet lists** добавь:
+   ```
+   https://raw.githubusercontent.com/AxelNerv/Openwrt-Podkop-hy2/main/user-subnets.txt
+   ```
+5. Убедись что включена опция **Download lists via proxy** — иначе GitHub может не скачаться без VPN
+
+### Шаг 4. Рекомендуемые настройки
 
 В Podkop → **Settings**:
 
 | Параметр | Значение | Зачем |
 |----------|----------|-------|
-| `DNS rewrite TTL` | `30` | Быстрая реакция на смену endpoint (особенно для Spotify/Discord Rich Presence) |
-| `Disable QUIC` | ✅ включено | QUIC через TPROXY нестабилен с Hysteria 2 |
-| `Download lists via proxy` | ✅ включено | Community-lists с GitHub скачиваются через VPN (если GitHub заблокирован) |
-| `DNS type` | `DoH` (DNS-over-HTTPS) | Провайдеры в РФ часто блокируют UDP:53 |
-| `Main DNS` | `1.1.1.1` или `8.8.8.8` | Cloudflare или Google DNS |
-| `Bootstrap DNS` | `8.8.8.8` | Для начального резолва DoH-сервера |
+| `DNS type` | `DoH` | Провайдеры РФ блокируют UDP:53 |
+| `Main DNS` | `1.1.1.1` | Cloudflare DoH |
+| `Bootstrap DNS` | `8.8.8.8` | Для начального резолва DoH |
+| `DNS rewrite TTL` | `30` | Быстрая реакция на смену IP |
+| `Disable QUIC` | ✅ | QUIC нестабилен с Hysteria 2 через TPROXY |
+| `Download lists via proxy` | ✅ | GitHub скачивается через VPN |
+| `Update interval` | `12h` | Автообновление списков |
 
-### Шаг 6. Save & Apply
+### Шаг 5. Save & Apply
 
-Нажми **Save & Apply** в Podkop. Подожди ~15-30 секунд (sing-box перезагрузит конфиг и скачает community-lists).
+Нажми **Save & Apply**. Подожди 15–30 секунд.
 
-### Шаг 7. Проверка
+### Шаг 6. Проверка
 
-В Podkop открой **Diagnostic → Global check** — все пункты должны быть ✅ зелёными.
+В Podkop → **Diagnostic → Global check** — все пункты должны быть ✅.
 
-Практический тест — зайди с устройства за роутером на:
-- `linkedin.com`
-- `claude.ai`
-- `chatgpt.com`
-- `netflix.com`
-- `medium.com`
-
-Все должны открываться без VPN-клиента на устройстве.
-
-## 🗂️ Что покрыто в списках
-
-<details>
-<summary><b>Категории доменов</b> (клик чтобы развернуть)</summary>
-
-- **Spotify** — расширенный набор (региональные spclient'ы, dealer WebSocket'ы, CDN) для работы Discord Rich Presence
-- **TikTok** — расширенный (не все CDN покрыты community)
-- **Xiaomi Mi Home / IoT** — требуется для работы приложения Mi Home через Podkop
-- **Google сервисы** — DNS, Ads/Analytics/Tag Manager, шрифты, Firebase, Cloud APIs, региональные домены
-- **Figma** — для работы (дизайн)
-- **AI-сервисы** — Claude/Anthropic, OpenAI/ChatGPT, Gemini, Perplexity, Midjourney, Runway, Suno, ElevenLabs, DeepSeek, HuggingFace, Poe и другие
-- **Соцсети** — LinkedIn, Reddit, Medium, Substack, Pinterest, Tumblr, Quora, Stack Overflow
-- **Стриминг видео** — Netflix, HBO Max, Disney+, Hulu, Crunchyroll, Apple TV+, Paramount+
-- **Стриминг музыки** — SoundCloud, Deezer, Tidal, Apple Music, Bandcamp
-- **Twitch**
-- **Игры** — EA/Apex Legends, Blizzard, Riot (LoL/Valorant), Ubisoft, Rockstar, Epic Games, Roblox, Minecraft
-- **Dev / SaaS** — GitHub (+Copilot), Atlassian (Jira/Trello/Bitbucket), Notion, Slack, Zoom, Vercel, Netlify, Heroku, Fly.io, Supabase
-- **Adobe, JetBrains, Microsoft VSCode, Dropbox, Box** — ушедшие лицензии
-- **Proton, Signal, Tor, Mullvad, Tutanota** — приватность
-- **Платежи** — PayPal, Stripe, Wise, Revolut, SWIFT, Visa, Mastercard
-- **Крипто-биржи** — Binance, Bybit, Coinbase, Kraken, OKX, MEXC и др.
-- **Новости** — BBC, Reuters, NYT, WSJ, Bloomberg, Guardian, Euronews, Meduza, Novaya, Currenttime, TheIns, Mediazona и другие
-- **Обучение** — Coursera, Udemy, edX, Duolingo, Skillshare, Masterclass
-- **Travel / Shopping** — Airbnb, Booking, eBay, Etsy, Envato
-
-</details>
-
-<details>
-<summary><b>Категории подсетей</b> (клик чтобы развернуть)</summary>
-
-- **Google DNS** (`8.8.8.0/24`, `8.8.4.0/24`) — провайдеры РФ часто блокируют
-- **Google Cloud Platform** — хостинг Spotify, Pokemon GO и тысячи других сервисов
-- **Google основные подсети** — поиск, Gmail, Maps, Drive, Docs
-- **EA / Apex Legends / Respawn** — включая EA Multiplay серверы
-- **Blizzard Battle.net**
-- **Riot Games** (LoL, Valorant матч-серверы)
-- **Rockstar Games**
-- **Ubisoft**
-- **Spotify** (дополнительные подсети к GCP)
-- **LinkedIn**
-- **Netflix** (актуальные 11 блоков)
-- **Twitch**
-- **BBC**
-- **ProtonVPN / ProtonMail**
-- **TikTok региональные CDN**
-
-Закомментированы по умолчанию (раскомментируй если нужно):
-- **DigitalOcean** — если не используешь community-list `digitalocean`
-- **Hetzner** — если не используешь community-list `hetzner`
-- **OVH** — если не используешь community-list `ovh`
-- **Fastly** (`151.101.0.0/16`) — для Reddit, но затрагивает тысячи других сайтов
-- **Apple** (`17.0.0.0/8`) — весь Apple, может замедлить обновления iOS/macOS
-
-</details>
-
-##  Кастомизация
-
-### Добавить свой сервис
-
-В Podkop, в поле User Domains (text) допиши новую секцию:
-
-```
-// ===== Мой сервис =====
-example.com
-api.example.com
-```
-
-И нажми **Save & Apply**.
-
-### Убрать категорию
-
-Если не хочешь пропускать через VPN, например, стриминг музыки — найди секцию `// ===== Стриминг музыки =====` и закомментируй (добавь `//` в начало) или удали строки.
-
-### Проверить что домен идёт через VPN
-
-С устройства за роутером:
+Практический тест — с устройства за роутером:
 ```bash
 nslookup linkedin.com
 ```
+Если IP из диапазона `198.18.x.x` — **работает** (FakeIP от sing-box). Реальный IP — домен не проксируется.
 
-Если в ответе IP из диапазона `198.18.0.0/15` — **работает** (это FakeIP от sing-box). Реальный IP означает что домен НЕ проксируется.
+---
+
+## 🗂️ Что покрыто
+
+<details>
+<summary><b>Домены</b></summary>
+
+- **Spotify** — расширенный (spclient'ы, dealer WebSocket'ы, CDN) для Discord Rich Presence
+- **TikTok** — полный набор включая российские и региональные API-эндпоинты
+- **Xiaomi Mi Home / IoT**
+- **Figma**
+- **AI-сервисы** — Claude, ChatGPT, Gemini, Perplexity, Midjourney, Suno, ElevenLabs, DeepSeek, HuggingFace и другие
+- **Discord** — полный набор (основные домены, CDN, gateway, голосовые регионы)
+- **GitHub** — включая Copilot и Codespaces
+- **Стриминг** — Netflix, HBO Max, Disney+, Hulu, Crunchyroll, Apple TV+, SoundCloud, Deezer, Tidal, Twitch
+- **Игры** — EA/Apex Legends, Blizzard/Battle.net, Ubisoft, Rockstar, Epic Games, Bungie/Destiny, Mihoyo/Hoyoverse, CD Projekt RED, Bethesda, 2K Games, Square Enix, Minecraft, VRChat
+- **Dev / SaaS** — Atlassian, Notion, Slack, Zoom, Vercel, Netlify, Heroku, Fly.io, Supabase
+- **Adobe, JetBrains, Microsoft, Apple, Dropbox**
+- **Proton, Signal, Tor, Mullvad, Tutanota**
+- **Платежи** — PayPal, Stripe, Wise, Revolut, Visa, Mastercard
+- **Крипто** — Binance, Bybit, Coinbase, Kraken, OKX, MEXC и другие
+- **Новости** — BBC, Reuters, NYT, Bloomberg, Guardian, Meduza, Mediazona и другие
+- **Обучение** — Coursera, Udemy, edX, Duolingo, Skillshare
+- **LinkedIn, Reddit, Medium, Substack**
+
+</details>
+
+<details>
+<summary><b>Подсети</b></summary>
+
+- **Google DNS** — `8.8.8.0/24`, `8.8.4.0/24`
+- **Google Cloud Platform** — хостинг Spotify, Pokemon GO и других сервисов
+- **TikTok / ByteDance** — AS396986, Volcengine CDN, Akamai ноды
+- **Discord** — AS49544 (voice/media), Cloudflare gateway (`162.159.128.0/22`), `104.16.0.0/12`
+- **Microsoft / Windows Update** — AS8075, Office 365, Azure CDN
+- **EA / Apex Legends** — AS35995
+- **Blizzard / Battle.net** — AS57976
+- **Ubisoft, Rockstar, Bungie, Mihoyo**
+- **Netflix** — 11 актуальных блоков
+- **LinkedIn, BBC, ProtonVPN, Stripe**
+
+Закомментированы (раскомментируй если нужно):
+- `17.0.0.0/8` — весь Apple
+- `151.101.0.0/16` — Fastly (Reddit + тысячи других)
+- Cloudflare полный список
+- AWS CloudFront
+- DigitalOcean, Hetzner, OVH
+
+</details>
+
+---
+
+## ⚠️ Важные нюансы
+
+**Discord** — community-list `discord` включи обязательно, даже если в внешних списках уже есть Discord. Подсеть `104.16.0.0/12` добавлена специально для фикса пинга 5000+ в голосовых каналах.
+
+**TikTok** — домены с суффиксом `-ru` (`frontier-ru`, `libra-ru` и т.д.) намеренно **не включены** — они ведут на российские CDN-ноды и их проксирование ломает работу приложения.
+
+**Steam** — основные домены закомментированы. Игровые серверы Steam лучше не проксировать — пинг вырастет. Оставлены только `valvesoftware.com`, `csgo.com`, `dota2.com`.
+
+---
 
 ## 🐛 Troubleshooting
 
-### Sing-box не стартует после добавления
-
-Проверь логи:
+**Список не применяется / sing-box не стартует**
 ```bash
 logread | grep -E "podkop|sing-box" | tail -50
 ```
 
-Скорее всего опечатка в домене или невалидный CIDR в подсетях. Ищи строку с ошибкой.
+**Сбросить FakeIP кэш**
+```bash
+rm /tmp/sing-box/cache.db
+/etc/init.d/podkop restart
+```
 
-### Какой-то сайт не открывается хотя должен
+**Проверить что домен попал в список**
+```bash
+grep tiktok /tmp/podkop/*.txt 2>/dev/null | head -5
+```
 
-1. Сбрось DNS-кэш на устройстве:
-   - Windows: `ipconfig /flushdns`
-   - macOS: `sudo killall -HUP mDNSResponder`
-   - Linux: `sudo systemd-resolve --flush-caches`
-2. Сбрось кэш FakeIP на роутере:
-   ```bash
-   ssh root@192.168.1.1
-   rm /tmp/sing-box/cache.db
-   service podkop restart
-   ```
+**Сброс DNS-кэша на устройстве**
+- Windows: `ipconfig /flushdns`
+- macOS: `sudo killall -HUP mDNSResponder`
 
-### Spotify Rich Presence в Discord тормозит
-
-Убедись что:
-- TTL = 30 в настройках Podkop
-- QUIC отключён
-- Discord перезапущен **полностью** (выйти из трея и открыть заново) после изменения списков
-
-### Какая-то подсеть ломает работу (трафик идёт не туда)
-
-Закомментируй её в `user-subnets.txt` (добавь `//` в начало), обнови в Podkop, Save & Apply.
-
-Частые кандидаты на отключение:
-- `17.0.0.0/8` (Apple)
-- `151.101.0.0/16` (Fastly — слишком широкий)
-- Подсети Hetzner/OVH/DigitalOcean если они перекрываются с community-lists
+---
 
 ## 📊 Совместимость
 
-| Роутер | Flash | RAM | Протестировано |
-|--------|-------|-----|----------------|
+| Роутер | Flash | RAM | Статус |
+|--------|-------|-----|--------|
 | ASUS TUF-AX4200 | 256 MB | 512 MB | ✅ |
 | Cudy TR3000 (256 MB) | 256 MB | 256 MB | ✅ |
-| Cudy TR3000 (128 MB) | 128 MB | 256 MB | ⚠️ впритык, может не хватить места |
+| Cudy TR3000 (128 MB) | 128 MB | 256 MB | ⚠️ впритык |
 
-На роутерах со 128 MB flash **рекомендую ставить только список доменов**, подсети пропустить (или оставить только критичные — Google Cloud, EA).
-
-## Вклад
-
-Если заметил что какой-то сервис не работает через VPN или наоборот зачем-то идёт через VPN (и не должен) — открой [Issue](../../issues) или Pull Request.
-
-Приветствуется:
-- Добавление новых заблокированных/ушедших сервисов
-- Обновление подсетей (IP-блоки меняются со временем)
-- Фидбек по работе конкретных игр (особенно Apex Legends)
-
-## 📜 Лицензия
-
-Свободное использование и модификация. Author: AxelNerv
-
-## 🔗 Полезные ссылки
-
-- [Podkop на GitHub](https://github.com/itdoginfo/podkop)
-- [Allow-domains — community-lists от itdoginfo](https://github.com/itdoginfo/allow-domains)
-- [Документация Podkop](https://podkop.net/docs/)
-- [OpenWrt](https://openwrt.org/)
-- [Sing-box](https://sing-box.sagernet.org/)
-- [Hysteria 2](https://v2.hysteria.network/)
+На роутерах со 128 MB flash рекомендую подключать только домены, подсети пропустить или оставить минимум.
 
 ---
+
+## 🔗 Ссылки
+
+- [Podkop](https://github.com/itdoginfo/podkop)
+- [Allow-domains (community-lists)](https://github.com/itdoginfo/allow-domains)
+- [Sing-box](https://sing-box.sagernet.org/)
+- [Hysteria 2](https://v2.hysteria.network/)
+- [OpenWrt](https://openwrt.org/)
