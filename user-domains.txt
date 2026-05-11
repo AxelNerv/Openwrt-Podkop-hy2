@@ -1,4 +1,11 @@
 fast.com
+faceit.com
+api.faceit.com
+cdn.faceit.com
+relay.faceit.com
+anticheat.faceit.com
+client-api.faceit.com
+esportal.com
 epicgames.dev
 api.epicgames.dev
 easyanticheat.net
