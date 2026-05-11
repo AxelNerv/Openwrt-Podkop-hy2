@@ -1,4 +1,8 @@
 fast.com
+epicgames.dev
+api.epicgames.dev
+easyanticheat.net
+account-public-service-prod.ol.epicgames.com
 spotify.com
 open.spotify.com
 accounts.spotify.com
