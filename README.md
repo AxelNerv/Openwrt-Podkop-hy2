@@ -79,7 +79,7 @@ https://raw.githubusercontent.com/AxelNerv/Openwrt-Podkop-hy2/main/discord-subne
 | `DNS rewrite TTL` | `30` |
 | `Disable QUIC` | ✅ |
 | `Download lists via proxy` | ✅ |
-| `Update interval` | `12h` |
+| `Update interval` | `1h` |
 
 ### Шаг 5. Save & Apply → подожди 15–30 секунд
 
@@ -98,15 +98,16 @@ IP из диапазона `198.18.x.x` — работает. Реальный I
 - **TikTok** — полный набор включая региональные API
 - **Xiaomi Mi Home / IoT**
 - **Figma**
-- **AI** — Claude, ChatGPT, Gemini, Perplexity, Midjourney, Suno, ElevenLabs, DeepSeek и другие
-- **GitHub** — включая Copilot и Codespaces
+- **AI** — Claude, ChatGPT, Gemini, DeepMind, Perplexity, Midjourney, Suno, ElevenLabs, DeepSeek и другие
+- **GitHub** — включая Copilot, Codespaces, NPM
+- **HDRezka** — резервные домены
+- **Anime** — Anilibria
 - **Стриминг** — Netflix, HBO Max, Disney+, Hulu, Crunchyroll, Twitch, SoundCloud, Deezer, Tidal
 - **Игры** — EA/Apex, Blizzard, Ubisoft, Rockstar, Epic, Bungie, Mihoyo, CD Projekt, Bethesda, 2K, Square Enix, Minecraft, VRChat, FACEIT
-- **Dev / SaaS** — Atlassian, Notion, Slack, Zoom, Vercel, Netlify, Heroku, Supabase
-- **Adobe, JetBrains, Microsoft, Apple, Dropbox**
+- **Dev / SaaS** — Atlassian, Notion, Slack, Zoom, Vercel, Netlify, Heroku, Supabase, DeepL
+- **Adobe, JetBrains, Microsoft, Apple, Dropbox, Amazon**
 - **Proton, Signal, Tor, Mullvad, Tutanota**
 - **Платежи** — PayPal, Stripe, Wise, Revolut, Visa, Mastercard
-- **Крипто** — Binance, Bybit, Coinbase, Kraken, OKX, MEXC и другие
 - **Новости** — BBC, Reuters, NYT, Bloomberg, Guardian, Meduza, Mediazona и другие
 - **Обучение** — Coursera, Udemy, edX, Duolingo, Skillshare
 - **LinkedIn, Reddit, Medium, Substack**
