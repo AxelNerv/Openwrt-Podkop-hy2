@@ -4,20 +4,20 @@
 
 Протестировано на **ASUS TUF-AX4200** и **Cudy TR3000** (256 MB flash), OpenWrt 24.10+, Podkop v0.7.17+, Sing-box 1.13.11+.
 
----
+-----
 
 ## 📋 Файлы
 
-| Файл | Секция | Что содержит |
-|------|--------|--------------|
-| [`user-domains.txt`](./user-domains.txt) | main | Все домены **кроме Discord** |
-| [`user-subnets.txt`](./user-subnets.txt) | main | Все подсети **кроме Discord** |
-| [`discord-domains.txt`](./discord-domains.txt) | discord | Только домены Discord |
-| [`discord-subnets.txt`](./discord-subnets.txt) | discord | Только подсети Discord |
+|Файл                                          |Секция |Что содержит                 |
+|----------------------------------------------|-------|-----------------------------|
+|[`user-domains.txt`](./user-domains.txt)      |main   |Все домены **кроме Discord** |
+|[`user-subnets.txt`](./user-subnets.txt)      |main   |Все подсети **кроме Discord**|
+|[`discord-domains.txt`](./discord-domains.txt)|discord|Только домены Discord        |
+|[`discord-subnets.txt`](./discord-subnets.txt)|discord|Только подсети Discord       |
 
 Такое разделение позволяет направить Discord через отдельный прокси (например РУ VPN для низкого пинга), а весь остальной трафик через основной.
 
----
+-----
 
 ## 🚀 Быстрый старт
 
@@ -42,11 +42,13 @@
 ### Шаг 2. Секция main — основной прокси
 
 В поле **Внешние списки доменов**:
+
 ```
 https://raw.githubusercontent.com/AxelNerv/Openwrt-Podkop-hy2/main/user-domains.txt
 ```
 
 В поле **Внешние списки подсетей**:
+
 ```
 https://raw.githubusercontent.com/AxelNerv/Openwrt-Podkop-hy2/main/user-subnets.txt
 ```
@@ -58,11 +60,13 @@ https://raw.githubusercontent.com/AxelNerv/Openwrt-Podkop-hy2/main/user-subnets.
 Укажи подключение к нужному прокси (например РУ VPN).
 
 В поле **Внешние списки доменов**:
+
 ```
 https://raw.githubusercontent.com/AxelNerv/Openwrt-Podkop-hy2/main/discord-domains.txt
 ```
 
 В поле **Внешние списки подсетей**:
+
 ```
 https://raw.githubusercontent.com/AxelNerv/Openwrt-Podkop-hy2/main/discord-subnets.txt
 ```
@@ -71,15 +75,15 @@ https://raw.githubusercontent.com/AxelNerv/Openwrt-Podkop-hy2/main/discord-subne
 
 В Podkop → **Настройки**:
 
-| Параметр | Значение |
-|----------|----------|
-| `DNS type` | `DoH` |
-| `Main DNS` | `1.1.1.1` |
-| `Bootstrap DNS` | `8.8.8.8` |
-| `DNS rewrite TTL` | `30` |
-| `Disable QUIC` | ✅ |
-| `Download lists via proxy` | ✅ |
-| `Update interval` | `1h` |
+|Параметр                  |Значение |
+|--------------------------|---------|
+|`DNS type`                |`DoH`    |
+|`Main DNS`                |`1.1.1.1`|
+|`Bootstrap DNS`           |`8.8.8.8`|
+|`DNS rewrite TTL`         |`30`     |
+|`Disable QUIC`            |✅        |
+|`Download lists via proxy`|✅        |
+|`Update interval`         |`1h`     |
 
 ### Шаг 5. Save & Apply → подожди 15–30 секунд
 
@@ -88,9 +92,10 @@ https://raw.githubusercontent.com/AxelNerv/Openwrt-Podkop-hy2/main/discord-subne
 ```bash
 nslookup linkedin.com
 ```
+
 IP из диапазона `198.18.x.x` — работает. Реальный IP — не проксируется.
 
----
+-----
 
 ## 🗂️ Что покрыто в main
 
@@ -112,7 +117,7 @@ IP из диапазона `198.18.x.x` — работает. Реальный I
 - **Обучение** — Coursera, Udemy, edX, Duolingo, Skillshare
 - **LinkedIn, Reddit, Medium, Substack**
 
----
+-----
 
 ## ⚠️ Важные нюансы
 
@@ -122,11 +127,14 @@ IP из диапазона `198.18.x.x` — работает. Реальный I
 
 **Steam** — домены для скачивания не включены, пинг к игровым серверам через VPN вырастет. Оставлены только `valvesoftware.com`, `csgo.com`, `dota2.com`.
 
----
+-----
 
 ## 🐛 Troubleshooting
 
 ```bash
+# Обновить списки вручную (замени IP на адрес своего роутера)
+ssh root@192.168.1.1 "podkop list_update"
+
 # Логи
 logread | grep -E "podkop|sing-box" | tail -50
 
@@ -134,23 +142,25 @@ logread | grep -E "podkop|sing-box" | tail -50
 rm /tmp/sing-box/cache.db && /etc/init.d/podkop restart
 
 # Проверить домен в списке
-grep discord /tmp/podkop/*.txt 2>/dev/null | head -5
+grep tiktok /tmp/podkop/*.txt 2>/dev/null | head -5
 
 # Сброс DNS на Windows
 ipconfig /flushdns
 ```
 
----
+> IP роутера у всех разный — `192.168.1.1` это наиболее частый, но может быть `192.168.0.1`, `192.168.9.1` или другой. Узнать свой: в Windows `ipconfig` → **Основной шлюз**.
+
+-----
 
 ## 📊 Совместимость
 
-| Роутер | Flash | RAM | Статус |
-|--------|-------|-----|--------|
-| ASUS TUF-AX4200 | 256 MB | 512 MB | ✅ |
-| Cudy TR3000 (256 MB) | 256 MB | 256 MB | ✅ |
-| Cudy TR3000 (128 MB) | 128 MB | 256 MB | ⚠️ впритык |
+|Роутер              |Flash |RAM   |Статус   |
+|--------------------|------|------|---------|
+|ASUS TUF-AX4200     |256 MB|512 MB|✅        |
+|Cudy TR3000 (256 MB)|256 MB|256 MB|✅        |
+|Cudy TR3000 (128 MB)|128 MB|256 MB|⚠️ впритык|
 
----
+-----
 
 ## 🔗 Ссылки
 
