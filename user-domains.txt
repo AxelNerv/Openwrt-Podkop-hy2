@@ -665,3 +665,10 @@ eth.getblock.io
 bsc.getblock.io
 trx.getblock.io
 sol.getblock.io
+adspower.com
+adspower-ru.com
+adspower.net
+app.adspower.com
+app-global.adspower.net
+img.adspower.net
+help.adspower.com
