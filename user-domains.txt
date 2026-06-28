@@ -1,7 +1,5 @@
 1e100.net
 2k.com
-21st.dev
-typeui.sh
 abcnews.go.com
 account-public-service-prod.ol.epicgames.com
 account-public-service-prod03.ol.epicgames.com
@@ -735,3 +733,9 @@ yt-video-upload.l.google.com
 jnn-pa.googleapis.com
 youtubekids.com
 youtube-nocookie.com
+profile.callofduty.com
+my.callofduty.com
+api.activision.com
+codm.activision.com
+callofdutyleague.com
+s.callofdutyleague.com
