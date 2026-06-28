@@ -739,3 +739,12 @@ api.activision.com
 codm.activision.com
 callofdutyleague.com
 s.callofdutyleague.com
+demonware.net
+prod.demonware.net
+blzddist1-a.akamaihd.net
+blzddist2-a.akamaihd.net
+cdn.blizzard.com
+us.cdn.blizzard.com
+eu.cdn.blizzard.com
+level3.blizzard.com
+nydus.battle.net
