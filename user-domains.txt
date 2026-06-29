@@ -748,3 +748,11 @@ us.cdn.blizzard.com
 eu.cdn.blizzard.com
 level3.blizzard.com
 nydus.battle.net
+us.actual.battle.net
+eu.actual.battle.net
+client-api.battle.net
+account.battle.net
+oauth.battle.net
+bnetcmsus-a.akamaihd.net
+blzddist3-a.akamaihd.net
+prod.cod.demonware.net
