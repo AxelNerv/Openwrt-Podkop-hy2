@@ -155,6 +155,7 @@ chatgpt.com
 civilization.com
 clashofclans.com
 claude.ai
+claude.com
 client-api.battle.net
 client.faceit.com
 clipdrop.co
