@@ -307,6 +307,15 @@ go.microsoft.com
 gog-statics.com
 gog.com
 gogalaxy.com
+google-analytics.com
+google.co.uk
+google.com
+google.ru
+googleadservices.com
+googleapis.com
+googlesyndication.com
+googletagmanager.com
+googleusercontent.com
 googlevideo.com
 grammarly.com
 grammarly.io
@@ -322,6 +331,7 @@ hdrezka.tv
 heads-fa.spotify.com
 heads4-ak.spotify.com.edgesuite.net
 hearthstone.com
+heartopia.com
 help.adspower.com
 help.ea.com
 helpshift.com
@@ -351,6 +361,7 @@ intellij.net
 intercom.com
 intercom.io
 io.mi.com
+ipify.org
 isnssdk.com
 istories.media
 itunes.apple.com
@@ -470,6 +481,7 @@ onedrive.com
 opal.google.com
 open.spotify.com
 openai.com
+openrouter.ai
 origin.com
 overwatch.com
 overwatchtracker.com
@@ -500,6 +512,7 @@ piston-data.mojang.com
 piston-meta.mojang.com
 platform.openai.com
 playapex.com
+playheartopia.com
 pluralsight.com
 poe.com
 pokemongo.com
@@ -584,6 +597,7 @@ sora.chatgpt.com
 sora.com
 soundcloud.com
 spclient.wg.spotify.com
+speedtest.net
 spotify.com
 spotifycdn.com
 spotifycdn.net
@@ -615,6 +629,10 @@ support.faceit.com
 svoboda.org
 swift.com
 take2games.com
+tapapis.com
+tapsdk.com
+taptap.com
+taptap.io
 testflight.apple.com
 textures.minecraft.net
 thebell.io
@@ -739,8 +757,15 @@ wustat.windows.com
 xbox.com
 xboxgameshub.com
 xboxlive.com
+xd.com
+xdcdn.com
+xdcdn.net
+xdg.com
+xdgtw.com
 xiaomi.com
 xiaomiyoupin.com
+xindong.com
+xmetacloud.com
 youtu.be
 youtube-nocookie.com
 youtube-ui.l.google.com
