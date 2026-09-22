@@ -1,5 +1,7 @@
 1e100.net
+21st.dev
 2k.com
+2ksports.com
 abcnews.go.com
 account-public-service-prod.ol.epicgames.com
 account-public-service-prod03.ol.epicgames.com
@@ -115,6 +117,7 @@ blzddist1-a.akamaihd.net
 blzddist2-a.akamaihd.net
 blzddist3-a.akamaihd.net
 bnetcmsus-a.akamaihd.net
+bo3.gg
 booking.com
 borderlands.com
 box.com
@@ -277,6 +280,7 @@ funimation.com
 gae2-spclient.spotify.com
 gateway.discord.gg
 gateway.ea.com
+gearbox.com
 gearboxsoftware.com
 gecko16-platform-ycru.tiktokv.com
 gemini.google
