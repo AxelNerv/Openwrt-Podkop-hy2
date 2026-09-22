@@ -118,6 +118,8 @@ blzddist2-a.akamaihd.net
 blzddist3-a.akamaihd.net
 bnetcmsus-a.akamaihd.net
 bo3.gg
+boltray.com
+boltraygames.com
 booking.com
 borderlands.com
 box.com
@@ -212,6 +214,7 @@ discordstatus.com
 disney-plus.net
 disneyplus.com
 dl.delivery.mp.microsoft.com
+dnse1.com
 docs.anthropic.com
 doom.com
 dossier.center
@@ -399,6 +402,7 @@ log16-platform-ycru.tiktokv.com
 login.live.com
 login.microsoftonline.com
 login5.spotify.com
+ltgamesglobal.net
 luma.ai
 lumalabs.ai
 m.tiktok.com
@@ -468,6 +472,7 @@ novaya.media
 novayagazeta.eu
 npmjs.com
 npmjs.org
+ntes53.netease.com
 ntservicepack.microsoft.com
 nydus.battle.net
 nyt.com
@@ -784,6 +789,7 @@ yt3.googleusercontent.com
 yt4.ggpht.com
 ytimg.com
 ytimg.l.google.com
+yunxinfw.com
 zenimax.com
 zenlesszonezero.com
 zoom.us
