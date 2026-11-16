@@ -410,6 +410,7 @@ mafiagame.com
 mainnet.infura.io
 makersuite.google.com
 marketplace.visualstudio.com
+maroon.z.superdupercdn.com
 mastercard.com
 mastercard.us
 masterclass.com
@@ -481,6 +482,7 @@ oaistatic.com
 oaiusercontent.com
 oauth.battle.net
 objects.githubusercontent.com
+obrut.show
 oec-im-tt-sg.tiktokglobalshopv.com
 oec16-normal-ycru.tiktokv.com
 office.com
