@@ -107,7 +107,6 @@ IP из диапазона `198.18.x.x` — работает. Реальный I
 - **GitHub** — включая Copilot, Codespaces, NPM
 - **HDRezka** — резервные домены
 - **Anime** — Anilibria
-- **Кино** — плеер Turbo для AbobaTV: страница плеера и заблокированный узел его CDN (российские узлы CDN идут напрямую)
 - **Стриминг** — Netflix, HBO Max, Disney+, Hulu, Crunchyroll, Twitch, SoundCloud, Deezer, Tidal
 - **Игры** — EA/Apex, Blizzard, Ubisoft, Rockstar, Epic, Bungie, Mihoyo, CD Projekt, Bethesda, 2K, Square Enix, Minecraft, VRChat, FACEIT
 - **Dev / SaaS** — Atlassian, Notion, Slack, Zoom, Vercel, Netlify, Heroku, Supabase, DeepL
