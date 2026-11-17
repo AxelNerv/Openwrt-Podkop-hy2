@@ -153,6 +153,7 @@ cdn.discordapp.com
 cdn.faceit.com
 cdn2.faceit.com
 cdn3.faceit.com
+cdnst.net
 cdprojektred.com
 character.ai
 chat.openai.com
